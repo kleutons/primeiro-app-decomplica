@@ -13,7 +13,7 @@ Este projeto é um aplicativo de CRUD para a organização de tarefas, desenvolv
 
 - **Frontend**: React, Vite, Material-UI
 - **Roteamento**: React Router
-- **Backend**: Node.js, Express, MongoDB
+- **Backend**: ...
 
 
 ## Instalação

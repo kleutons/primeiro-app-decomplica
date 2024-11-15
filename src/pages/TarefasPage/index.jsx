@@ -2,12 +2,18 @@ import React, { useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 
-const initialRows = [
+const initialRows = [ 
   createData(1, 'Tarefa 1', 'Descrição da Tarefa', '2022-01-01', '2022-01-02', 'Concluída', 'Recurso 1'),
-  createData(2, 'Tarefa 2', 'Outra Descrição', '2022-02-01', '2022-02-05', 'Em Andamento', 'Recurso 2'),
-  createData(3, 'Tarefa 3', 'Mais uma Descrição', '2022-03-01', '2022-03-10', 'Aguardando', 'Recurso 3'),
-]
+  createData(2, 'Tarefa 2', 'Outra Descrição', '2022-02-01', '2022-02-05', 'Em Andamento', 'Recurso 2'), 
+  createData(3, 'Tarefa 3', 'Mais uma Descrição', '2022-03-01', '2022-03-10', 'Aguardando', 'Recurso 3'), 
+  createData(4, 'Tarefa 4', 'Descrição adicional', '2022-04-01', '2022-04-02', 'Concluída', 'Recurso 4'), 
+  createData(5, 'Tarefa 5', 'Descrição extensa', '2022-05-01', '2022-05-05', 'Em Andamento', 'Recurso 5'), 
+  createData(6, 'Tarefa 6', 'Breve Descrição', '2022-06-01', '2022-06-10', 'Aguardando', 'Recurso 6'),
+  createData(7, 'Tarefa 7', 'Outra Tarefa', '2022-07-01', '2022-07-15', 'Concluída', 'Recurso 7')
+];
 
 function createData(id, titulo, descricao, dataInicio, dataFim, status, recurso) {
   return { id, titulo, descricao, dataInicio, dataFim, status, recurso };
@@ -59,8 +65,8 @@ export default function TarefasPage() {
                   <TableCell align="right">{row.status}</TableCell>
                   <TableCell align="right">{row.recurso}</TableCell>
                   <TableCell align="right">
-                    <Button variant="contained" color="primary" onClick={() => handleEdit(row.id)}>Editar</Button>
-                    <Button variant="contained" color="secondary" onClick={() => handleDelete(row.id)} sx={{ ml: 1 }}>Excluir</Button>
+                    <Button variant="contained" color="primary" onClick={() => handleEdit(row.id)}><EditIcon fontSize="small" /></Button>
+                    <Button variant="contained" color="secondary" onClick={() => handleDelete(row.id)} sx={{ ml: 1 }}><DeleteIcon fontSize="small" /></Button>
                   </TableCell>
                 </TableRow>
               ))}

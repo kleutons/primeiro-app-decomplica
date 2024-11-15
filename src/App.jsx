@@ -14,6 +14,7 @@ import TarefasPage from './pages/TarefasPage';
 import AboutPage from './pages/AboutPage';
 import NotFoundPage from './pages/NotFoundPage';
 import LoginPage from './pages/LoginPage';
+import ListarTarefa from './pages/tarefa/ListarTarefa';
 
 // Definição de navegação
 const NAVIGATION = [
@@ -29,6 +30,11 @@ const NAVIGATION = [
   {
     segment: 'tarefas',
     title: 'Tarefas',
+    icon: <AssignmentIcon />,
+  },
+  {
+    segment: 'tarefa',
+    title: 'Tarefa',
     icon: <AssignmentIcon />,
   },
   { 
@@ -60,6 +66,7 @@ function AppProviderBasic(props) {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tarefas" element={<TarefasPage />} />
+          <Route path="/tarefa" element={<ListarTarefa />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />

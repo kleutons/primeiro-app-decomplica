@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AppProvider } from '@toolpad/core/react-router-dom';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
 import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon  from '@mui/icons-material/Person';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import InfoIcon from '@mui/icons-material/Info';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
@@ -12,6 +13,7 @@ import HomePage from './pages/HomePage';
 import TarefasPage from './pages/TarefasPage';
 import AboutPage from './pages/AboutPage';
 import NotFoundPage from './pages/NotFoundPage';
+import LoginPage from './pages/LoginPage';
 
 // Definição de navegação
 const NAVIGATION = [
@@ -28,6 +30,11 @@ const NAVIGATION = [
     segment: 'tarefas',
     title: 'Tarefas',
     icon: <AssignmentIcon />,
+  },
+  { 
+    segment: 'login',
+    title: 'Login',
+    icon: <PersonIcon />, 
   },
   {
     segment: 'about',
@@ -53,6 +60,7 @@ function AppProviderBasic(props) {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tarefas" element={<TarefasPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

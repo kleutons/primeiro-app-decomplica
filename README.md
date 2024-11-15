@@ -22,5 +22,17 @@ Este projeto é um aplicativo de CRUD para a organização de tarefas, desenvolv
    ```sh
    git clone https://github.com/kleutons/primeiro-app-decomplica
    cd primeiro-app-decomplica
+   ```
+
+2. **Instale as dependências**:
+   ```sh
+   npm install
+   ```
+
+
+3. **Executando a Aplicação**:
+   ```sh
+   npm run dev
+   ```
 
 
